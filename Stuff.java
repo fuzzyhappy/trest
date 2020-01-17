@@ -3,7 +3,7 @@
 
 public class Stuff {
     public static void main(String[] args) {
-	System.out.println(fib(6));
+	System.out.println(gcd(81, 135));
     }
 
     // Returns the Fibonnaci sequence's nth number
@@ -36,7 +36,10 @@ public class Stuff {
     // Returns the GCD of two numbers
     // Must use Euclid's algorithm
     static int gcd(int a, int b) {
-	return 3;
+	if (a == 0) {
+	   return b;
+	}
+	return gcd(b % a, a);
     }
 
     // Returns all prime factors of a number
