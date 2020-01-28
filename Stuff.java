@@ -1,3 +1,4 @@
+//MATT WAS HERE
 // Example class for Git exercise
 // Do not use library functions for any of these
 
@@ -18,7 +19,21 @@ public class Stuff {
     // Sorts a list of integers from smallest to largest
     // Build your own - don't use a library sorting method
     static int[] sort(int[] a){
-	return (new int[8]);
+	int smallest =99999;
+	int smallIndex = 0;
+		for(int i = 0; i < a.length; i++){
+			smallest = 99999;
+			for(int i2 = 0; i2 < a.length; i2++){
+				if(a[i2] < a[i]){
+					smallest = a[i2];
+					smallIndex = i2;
+					}	
+				}
+			int x = a[i];
+			a[i] = a[smallIndex];
+			a[smallIndex] = x;
+			}
+	return (a);
     }
 
     // Returns the number of occurances of each letter (ABCD...) in a given string
